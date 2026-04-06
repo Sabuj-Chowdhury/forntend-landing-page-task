@@ -19,6 +19,7 @@ const inter = Inter({
 
 export const metadata = {
   title: "Master Focus & Get More Done | Assessment - Frontend",
+
   description:
     "Stop procrastinating and start finishing. The deep work blueprint for productivity.",
 };
@@ -32,7 +33,12 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className={cn(sora.variable, inter.variable, "font-sans", geist.variable)}
+      className={cn(
+        sora.variable,
+        inter.variable,
+        "font-sans scroll-smooth",
+        geist.variable,
+      )}
     >
       <body className="antialiased" suppressHydrationWarning>
         <ThemeProvider

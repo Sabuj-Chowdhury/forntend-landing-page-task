@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/Button";
 
 export function Pricing() {
   return (
-    <section className="py-24 md:py-32 bg-white dark:bg-[#050505]">
+    <section id="pricing" className="py-24 md:py-32 bg-white dark:bg-[#050505]">
       <Container className="max-w-[1200px] mx-auto px-4">
         {/* 2-Column Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-stretch">

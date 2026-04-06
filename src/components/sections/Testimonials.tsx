@@ -79,7 +79,7 @@ export function Testimonials() {
   };
 
   return (
-    <section className="py-24 md:py-32 bg-white dark:bg-[#050505] overflow-hidden">
+    <section id="testimonials" className="py-24 md:py-32 bg-white dark:bg-[#050505] overflow-hidden">
       <Container className="max-w-[90rem]">
         {/* Header Section */}
         <div className="flex flex-col items-center text-center mb-16 md:mb-20">

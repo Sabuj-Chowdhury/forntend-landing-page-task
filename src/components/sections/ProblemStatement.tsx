@@ -8,7 +8,7 @@ import img3 from "../../../public/section_1_3.jpg";
 
 export function ProblemStatement() {
   return (
-    <section className="py-20 md:py-32 bg-white dark:bg-[#050505] overflow-hidden relative">
+    <section id="overview" className="py-20 md:py-32 bg-white dark:bg-[#050505] overflow-hidden relative">
       <Container className="text-center relative z-10 flex flex-col items-center">
         {/* Top Badge */}
         <div className="inline-flex items-center gap-3 px-4 py-2 bg-black/5 dark:bg-[#111317] backdrop-blur-sm border border-black/10 dark:border-white/10 rounded-full mb-8 lg:mb-10 shadow-sm dark:shadow-md dark:shadow-[#2466F2]/20">

@@ -139,7 +139,7 @@ export function ModuleList() {
   };
 
   return (
-    <section className="py-24 md:py-32 bg-white dark:bg-[#050505] overflow-hidden">
+    <section id="curriculum" className="py-24 md:py-32 bg-white dark:bg-[#050505] overflow-hidden">
       <Container className="max-w-6xl mx-auto px-4">
         {/* Header Section */}
         <div className="flex flex-col items-center text-center mb-16 md:mb-24">
