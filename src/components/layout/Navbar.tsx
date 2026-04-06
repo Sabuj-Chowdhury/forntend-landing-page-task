@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useTheme } from "next-themes";
-import { Container } from "./Container";
+
 import { Button } from "@/components/ui/Button";
 import { cn } from "@/lib/utils";
 import { ThemeToggle } from "./ThemeToggle";
@@ -75,11 +75,11 @@ export function Navbar() {
                 priority
                 className={cn(
                   "h-9 w-auto object-contain transition-all duration-300",
-                !mounted
-                  ? "brightness-100"
-                  : resolvedTheme === "dark"
+                  !mounted
                     ? "brightness-100"
-                    : "brightness-0",
+                    : resolvedTheme === "dark"
+                      ? "brightness-100"
+                      : "brightness-0",
                 )}
               />
               <span
@@ -127,12 +127,11 @@ export function Navbar() {
               href="#pricing"
               className="hidden [@media(min-width:681px)]:block"
             >
-
-              {/* this button needs to hidden on small scern */}
+             
               <Button
                 size="lg"
                 className={cn(
-                  "h-12 px-8 rounded-lg",
+                  "h-12 px-8 rounded-lg hidden md:block",
                   "bg-[#2466F2] text-white",
                   "hover:brightness-110",
                   "font-bold text-base shadow-lg shadow-[#2466F2]/20 transition-all active:scale-95",
@@ -146,10 +145,8 @@ export function Navbar() {
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className={cn(
-                "w-10 h-10 flex items-center justify-center rounded-full transition-all duration-300 [@media(min-width:681px)]:hidden",
-                resolvedTheme === "dark"
-                  ? "text-white bg-white/10 hover:bg-white/20"
-                  : "text-black bg-black/5 hover:bg-black/10",
+                "w-10 h-10 flex items-center justify-center rounded-full transition-all duration-300 [@media(min-width:900px)]:hidden",
+                "text-black bg-black/5 hover:bg-black/10 dark:text-white dark:bg-white/10 dark:hover:bg-white/20",
               )}
               aria-label="Toggle menu"
             >
@@ -169,7 +166,7 @@ export function Navbar() {
         </div>
       </nav>
 
-{/* bg for mobile menu overlay is not corrrect ple see the scernshot attched */}
+      {/* bg for mobile menu overlay is not corrrect ple see the scernshot attched */}
       {/* Mobile Menu Overlay */}
       <div
         className={cn(
@@ -177,9 +174,7 @@ export function Navbar() {
           isMenuOpen
             ? "opacity-100 pointer-events-auto"
             : "opacity-0 pointer-events-none",
-          resolvedTheme === "dark"
-            ? "bg-black/60 backdrop-blur-2xl"
-            : "bg-white/60 backdrop-blur-2xl",
+          "bg-white/60 dark:bg-black/60 backdrop-blur-2xl",
         )}
       >
         <div className="flex flex-col items-start justify-start h-full px-6 gap-6 pt-32">
@@ -193,7 +188,7 @@ export function Navbar() {
                 isMenuOpen
                   ? "translate-y-0 opacity-100"
                   : "translate-y-4 opacity-0",
-                resolvedTheme === "dark" ? "text-white/90 hover:text-white" : "text-black/80 hover:text-black",
+                "text-black/80 hover:text-black dark:text-white/90 dark:hover:text-white",
               )}
               style={{ transitionDelay: `${index * 50}ms` }}
             >
