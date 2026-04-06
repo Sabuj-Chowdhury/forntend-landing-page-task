@@ -3,8 +3,6 @@ import { Hero } from "@/components/sections/Hero";
 import { ProblemStatement } from "@/components/sections/ProblemStatement";
 import { SolutionSection } from "@/components/sections/SolutionSection";
 import { FeatureSteps } from "@/components/sections/FeatureSteps";
-import { TrustSection } from "@/components/sections/TrustSection";
-import { Features } from "@/components/sections/Features";
 import { ModuleList } from "@/components/sections/ModuleList";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { Pricing } from "@/components/sections/Pricing";
@@ -19,8 +17,6 @@ export default function Home() {
       <ProblemStatement />
       <SolutionSection />
       <FeatureSteps />
-      <TrustSection />
-      <Features />
       <ModuleList />
       <Testimonials />
       <Pricing />
