@@ -73,13 +73,13 @@ export function Hero() {
           />
 
           {/* Bluish Linear Gradient Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-t from-[#2466F2]/60 via-[#2466F2]/20 to-transparent mix-blend-multiply dark:mix-blend-overlay opacity-80 group-hover:opacity-100 transition-opacity duration-500" />
-          
+          <div className="absolute inset-0 bg-linear-to-t from-[#2466F2]/60 via-[#2466F2]/20 to-transparent mix-blend-multiply dark:mix-blend-overlay opacity-80 group-hover:opacity-100 transition-opacity duration-500" />
+
           <div className="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition-colors duration-500" />
 
           {/* Play Button Overlay */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
-            <div className="w-[88px] h-[88px] rounded-full border-[6px] border-white/30 backdrop-blur-[40px] bg-white/10 flex items-center justify-center p-[24px] group-hover:scale-105 transition-transform duration-300 shadow-[0_8px_30px_rgba(0,0,0,0.3)]">
+            <div className="w-[88px] h-[88px] rounded-full border-[6px] border-white/30 backdrop-blur-2xl bg-white/10 flex items-center justify-center p-3 group-hover:scale-105 transition-transform duration-300 shadow-[0_8px_30px_rgba(0,0,0,0.3)]">
               <Image
                 src={playButtonImg}
                 alt="Play"
