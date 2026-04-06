@@ -8,19 +8,27 @@ import playButtonImg from "../../../public/playbutton.png";
 export function Hero() {
   return (
     <div className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden bg-white dark:bg-[#050505]">
-      {/* Background Horizontal Scanlines & Glows */}
+      {/* Top Background Figma Glows (Face Glows only) */}
       <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden flex justify-center">
-        {/* Horizontal Scanlines Pattern */}
+        <div className="absolute top-[30%] left-1/2 -translate-x-1/2 w-[75rem] h-[37.5rem] bg-[#2466F2]/10 rounded-full blur-[160px]" />
+      </div>
+
+      {/* Structured Bottom Blue textured container (Restricted to bottom half) */}
+      <div className="absolute left-0 right-0 bottom-0 h-[65%] md:h-[60%] z-0 pointer-events-none overflow-hidden">
+        {/* Core bottom vertical gradient background */}
+        <div className="absolute inset-0 bg-gradient-to-t from-[#2466F2] via-[#2466F2]/40 to-transparent" />
+
+        {/* Visible Bright Blue Scanlines overlaying the gradient */}
         <div
-          className="absolute inset-0 opacity-20 dark:opacity-15 mix-blend-multiply dark:mix-blend-screen"
+          className="absolute inset-0 opacity-60 dark:opacity-40 pointer-events-none mix-blend-screen"
           style={{
             backgroundImage:
-              "repeating-linear-gradient(to bottom, transparent, transparent 3px, var(--color-primary) 3px, var(--color-primary) 4px)",
+              "repeating-linear-gradient(to bottom, transparent, transparent 3px, #2466F2 3px, #2466F2 4px)",
           }}
         />
-        {/* Figma Glow-Reflect / Primary Blue Glows */}
-        <div className="absolute top-[-10%] left-1/2 -translate-x-1/2 w-[50rem] h-[25rem] bg-[#2466F2]/30 rounded-full blur-[120px]" />
-        <div className="absolute top-[30%] left-1/2 -translate-x-1/2 w-[75rem] h-[37.5rem] bg-[#2466F2]/15 rounded-full blur-[160px]" />
+
+        {/* Top fade out to ensure abrupt lines don't show at the top boundary */}
+        <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-white dark:from-[#050505] to-transparent" />
       </div>
 
       <Container className="text-center relative z-10">
@@ -33,9 +41,8 @@ export function Hero() {
         </div>
 
         {/* Headline */}
-        <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold font-sans mb-6 leading-tight tracking-tight max-w-5xl mx-auto text-black dark:text-white">
-          Master Focus & Get <br className="hidden sm:block" />
-          More Done In Less Time
+        <h1 className="text-5xl sm:text-4xl text-center  lg:text-8xl font-bold font-sans mb-6 leading-tight tracking-tight max-w-5xl mx-auto text-black dark:text-white">
+          Master Focus & Get More Done In Less Time
         </h1>
 
         {/* Subheadline */}
@@ -63,7 +70,7 @@ export function Hero() {
         </div>
 
         {/* Video Placeholder / Frame */}
-        <div className="relative max-w-5xl mx-auto rounded-3xl md:rounded-[40px] border border-neutral-200 dark:border-white/10 bg-white dark:bg-[#1A1C22] shadow-[0_20px_80px_rgba(36,102,242,0.15)] overflow-hidden group cursor-pointer">
+        <div className="relative max-w-5xl mx-auto rounded-3xl md:rounded-[40px] bg-[#1A1C22] shadow-[0_30px_100px_rgba(0,0,0,0.5)] overflow-hidden group cursor-pointer border border-white/5">
           <Image
             src={heroImg}
             alt="Hero Presentation Video"
@@ -72,10 +79,8 @@ export function Hero() {
             placeholder="blur"
           />
 
-          {/* Bluish Linear Gradient Overlay */}
-          <div className="absolute inset-0 bg-linear-to-t from-[#2466F2]/60 via-[#2466F2]/20 to-transparent mix-blend-multiply dark:mix-blend-overlay opacity-80 group-hover:opacity-100 transition-opacity duration-500" />
-
-          <div className="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition-colors duration-500" />
+          {/* Interactive Darkening */}
+          <div className="absolute inset-0 bg-black/10 group-hover:bg-black/30 transition-colors duration-500 pointer-events-none" />
 
           {/* Play Button Overlay */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
